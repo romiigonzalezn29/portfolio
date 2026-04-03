@@ -7,11 +7,6 @@
   height: 550px;
 } 
 
-.btnHouse{
-    position: absolute;
-  top: 7%;
-  left: 55%;
-}
 
 .house{
   position: absolute;
@@ -38,10 +33,15 @@
 
 div img{
   width:250px;
+  cursor: pointer;
 
 }
+
+
 img:hover{
   transform: scale(1.2);
+transition: all 0.3s ease;
+
 }
 
 button{
@@ -51,4 +51,35 @@ button{
   cursor: pointer;
   color: orange;
   padding: 15px 20px;
+}
+
+button:hover{
+transform: scale(1.2);
+transition: all 0.3s ease-in-out;
+}
+
+.btnHouse{
+    position: absolute;
+  top: 7%;
+  left: 55%;
+}
+
+.btnLab{
+  position:absolute;
+  top: 80%;
+  left: 65%;
+  color: #04af0b;
+  border-color:#04af0b;  
+}
+.btnLab:hover{
+  color: #78f10c;
+  border-color:#78f10c;  
+}
+
+.btnFront{
+  position: absolute;
+  top: 40%;
+  left: 30%;
+  color: #0093f3;
+  border-color: #0093f3;
 }
