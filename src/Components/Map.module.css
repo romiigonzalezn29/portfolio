@@ -8,78 +8,169 @@
 } 
 
 
-.house{
+#house{
   position: absolute;
   top: 20%;
   left: 49%;
 }
 
-.lab{
+#lab{
   position: absolute;
   top: 50%;
   left: 60%;
   
 }
-.interative{
+#interative{
+  position: absolute;
+    top: 30%;
+  left: 25%;
+}
+#front{
   position: absolute;
   top: 57%;
   left: 40%;
 }
-.front{
-  position: absolute;
-  top: 30%;
-  left: 25%;
-}
 
-div img{
+.site{
   width:250px;
   cursor: pointer;
 
 }
 
 
-img:hover{
-  transform: scale(1.2);
+.site:hover{
+  transform: scale(1.15);
 transition: all 0.3s ease;
+
 
 }
 
 button{
-  background-color: black;
-  border: 2px solid orange;
-  border-radius: 5px;
+  position: absolute;
+
+  padding: 12px 24px;
+  border-radius: 12px;
   cursor: pointer;
-  color: orange;
-  padding: 15px 20px;
+
+  /* color dinámico */
+  color: var(--color-main);
+  border: 1.5px solid var(--color-soft);
+
+  background: linear-gradient(145deg, var(--color-dark), #1a1a1a);
+
+  text-shadow: 
+    0 0 3px var(--color-soft),
+    0 0 6px var(--color-glow);
+
+  box-shadow:
+    0 3px 0 var(--color-shadow),
+    0 0 6px var(--color-glow-soft),
+    inset 0 1px 2px rgba(255,255,255,0.2),
+    inset 0 -2px 3px rgba(0,0,0,0.6);
+
+  transition: all 0.25s ease;
 }
 
 button:hover{
-transform: scale(1.2);
-transition: all 0.3s ease-in-out;
+  color: var(--color-hover);
+  border-color: var(--color-hover);
+
+  box-shadow:
+    0 3px 0 var(--color-shadow),
+    0 0 10px var(--color-glow),
+    0 0 18px var(--color-glow-soft),
+    inset 0 1px 3px rgba(255,255,255,0.25),
+    inset 0 -2px 3px rgba(0,0,0,0.6);
+
+  transform: translateY(-1px);
+}
+
+button::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 12px;
+  background: linear-gradient(to bottom, rgba(255,255,255,0.15), transparent);
+  opacity: 0.5;
+  pointer-events: none;
 }
 
 .btnHouse{
     position: absolute;
   top: 7%;
   left: 55%;
+  --color-main: #fda507;
+  --color-hover: #fdf318;
+  --color-soft: rgba(253, 165, 7, 0.5);
+  --color-dark: #7a4a00;
+  --color-shadow: #5a3500;
+  --color-glow: rgba(253, 165, 7, 0.6);
+  --color-glow-soft: rgba(253, 165, 7, 0.25);
 }
 
+.btnHouse:hover{
+  color: #fdf318;
+  border-color: #fdf318;
+}
 .btnLab{
   position:absolute;
   top: 80%;
   left: 65%;
-  color: #04af0b;
-  border-color:#04af0b;  
+  --color-main: #04af0b;
+  --color-hover: #78f10c;
+  --color-soft: rgba(4, 175, 11, 0.5);
+  --color-dark: #0f5a12;
+  --color-shadow: #0a3d0c;
+  --color-glow: rgba(120, 241, 12, 0.6);
+  --color-glow-soft: rgba(120, 241, 12, 0.25);  
 }
 .btnLab:hover{
   color: #78f10c;
   border-color:#78f10c;  
 }
 
+
+
 .btnFront{
   position: absolute;
-  top: 40%;
-  left: 30%;
-  color: #0093f3;
-  border-color: #0093f3;
+  top: 87%;
+  left: 45%;
+  --color-main: #0093f3;
+  --color-hover: #00f3fd;
+  --color-soft: rgba(0, 147, 243, 0.5);
+  --color-dark: #003a6b;
+  --color-shadow: #00294d;
+  --color-glow: rgba(0, 243, 253, 0.6);
+  --color-glow-soft: rgba(0, 243, 253, 0.25);
 }
+
+.btnFront:hover{
+  color: #00f3fd;
+  border-color: #00f3fd;
+}
+
+.btnInt {
+  position: absolute;
+  top: 20%;
+  left: 25%;
+
+   --color-main: #a855f7;
+  --color-hover: #d8b4fe;
+  --color-soft: rgba(168, 85, 247, 0.4);
+  --color-dark: #3a105f;
+  --color-shadow: #2a0a45;
+  --color-glow: rgba(192, 132, 252, 0.5);
+  --color-glow-soft: rgba(192, 132, 252, 0.25);
+}
+
+
+.btnInt:hover {
+  color: #d8b4fe;
+  border-color: #d8b4fe;
+}
+
+
+
+
+
+

@@ -1,8 +1,9 @@
 
   .body, button{
-    font-family: "Press Start 2P", system-ui;
-    font-weight: 400;
+    font-family: 'Cinzel Decorative', serif;
+    font-weight: 500;
     font-style: normal;
+    font-size: 20px;
   }
 
   html{
