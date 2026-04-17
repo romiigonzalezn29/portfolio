@@ -5,6 +5,7 @@ import house from '../assets/house.png'
 import front from '../assets/front.png'
 import interative from '../assets/interactive.png'
 import lab from '../assets/lab.png'
+import book from '../assets/skills.png'
 
 import Card from "./Card";
 import { proyectos } from "../data/proyectos";
@@ -33,13 +34,14 @@ export default function Map(){
   return(
     <>
       <div className={s.map}>
-
+        {/* MAPA */}
+        <img src={book} alt='Skills' className={s.site} id={s.book} onClick={() => setActiveCard("house")}/>
         {/* HOUSE */}
         <button 
           className={s.btnHouse}
           onClick={(e) => handleOpenCard("house", e)}
         >
-          Casa
+          Perfil
         </button>
 
         <img 

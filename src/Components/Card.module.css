@@ -37,7 +37,7 @@
  .cardTitle {
 position: absolute;
   font-size: 24px;
-  top: 10%;
+  top: 7%;
   left: 40%;
   z-index: 3;
   color:  var(--color-hover);
@@ -59,7 +59,7 @@ padding: 0;
   top: 50%; 
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 900px;
+  width: 950px;
   z-index: 1;
 }
 
@@ -75,8 +75,8 @@ padding: 0;
  
 }
 
-
 .proyecto{
+  position: relative;
     width: 150px;
     height: 150px;
     z-index: 3;
@@ -93,7 +93,68 @@ padding: 0;
     0 0 20px rgba(168,85,247,0.2);
 
 
+    }
+
+    .muestra{
+      width: 148px;
+      height: 148px;
+      border-radius: 8px;
+    
+    }
+
+.singleLayout {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
+
+.multiLayout {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+.multiLayout .proyectosContainer {
+transform: none;
+display: flex;
+margin-top: 20px;
+ 
+}
+
+.multiLayout .proyectosContainer .proyecto {
+ 
+    width: 130px;
+  height: 100px;
+  margin: 10px;
+}
+
+.multiLayout .proyectosContainer .proyecto .muestra {
+ width: 130px;
+height: 100px;
+  
+}
+ .multiLayout .proyectosContainer .proyecto .muestra:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+  
+}
+
+.multiLayout .contenedor {
+  width: 60%;
+  height: auto;
+  align-items: center;
+  text-align: center;
+
+}
+.multiLayout .contenedor p, div{
+  margin: 5px;
+}
+.multiLayout .actions {
+  justify-content: center;
+}
+
+
+
 .card {
   animation: aparecer 0.4s ease;
 }
@@ -111,10 +172,15 @@ padding: 0;
   font-size: 16px;
 }
 
-button a {
+.oculto{
+  display: none;
+}
+
+a {
   text-decoration: none;
   color: inherit;
 }
+
 
 @keyframes aparecer {
   from {
