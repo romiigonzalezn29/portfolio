@@ -67,7 +67,7 @@ const isMultiProject = projects && projects.length > 1;
 
 <div className={s.actions}>
  
-    <button className={`${isMultiProject ? s.oculto : s.project}`}>
+    <button className={`${isMultiProject ? s.oculto : s.project} ${s.btnTheme}`}>
       <a
       href={link}
       target="_blank"
@@ -79,7 +79,7 @@ const isMultiProject = projects && projects.length > 1;
     </button>
     
 
-  <button className={s.closeBtn} onClick={onClose}>
+  <button className={`${s.closeBtn} ${s.btnTheme}`} onClick={onClose}>
     Cerrar
   </button>
 </div>
