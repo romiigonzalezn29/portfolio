@@ -1,104 +1,105 @@
-.overlay {
-  position: fixed; /* cubre toda la pantalla */
-  inset: 0;
+/* ========== IMPORTAR FUENTES ESTILO ANTIGUO ========== */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=MedievalSharp&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap');
 
+.overlay {
+  position: fixed;
+  inset: 0;
   display: flex;
   justify-content: center;
   align-items: center;
-
   z-index: 1000;
-}
-.btnTheme{
-  position: absolute;
-
-  padding: 12px 24px;
-  border-radius: 12px;
-  cursor: pointer;
-
-  /* color dinámico */
-  color: var(--color-main);
-  border: 1.5px solid var(--color-soft);
-
-  background: linear-gradient(145deg, var(--color-dark), #1a1a1a);
-
-  text-shadow: 
-    0 0 3px var(--color-soft),
-    0 0 6px var(--color-glow);
-
-  box-shadow:
-    0 3px 0 var(--color-shadow),
-    0 0 6px var(--color-glow-soft),
-    inset 0 1px 2px rgba(255,255,255,0.2),
-    inset 0 -2px 3px rgba(0,0,0,0.6);
-
-  transition: all 0.25s ease;
-}
-
-.btnTheme:hover{
-  color: var(--color-hover);
-  border-color: var(--color-hover);
-
-  box-shadow:
-    0 3px 0 var(--color-shadow),
-    0 0 10px var(--color-glow),
-    0 0 18px var(--color-glow-soft),
-    inset 0 1px 3px rgba(255,255,255,0.25),
-    inset 0 -2px 3px rgba(0,0,0,0.6);
-
-  transform: translateY(-1px);
-}
-
-.btnTheme::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  border-radius: 12px;
-  background: linear-gradient(to bottom, rgba(255,255,255,0.15), transparent);
-  opacity: 0.5;
-  pointer-events: none;
 }
 
 .blur {
   position: absolute;
   inset: 0;
   backdrop-filter: blur(6px);
-  background: rgba(0, 0, 0, 0.3); /* oscurece un poco */
+  background: rgba(0, 0, 0, 0.4);
   z-index: 1;
 }
 
-
+/* ========== CARD ESTILO PERGAMINO OSCURO CON TEMAS ========== */
 .card {
   position: relative;
   z-index: 2;
   display: flex;
   flex-direction: row;
   align-items: center;
-  color:  var(--color-hover);
-    text-shadow: 
+  color: var(--color-hover);
+  text-shadow: 
     0 0 3px var(--color-dark),
     0 0 6px var(--color-shadow);
- 
 }
 
-
- .cardTitle {
-position: absolute;
-  font-size: 24px;
+/* TÍTULO PRINCIPAL - Estilo pergamino real */
+.cardTitle {
+  position: absolute;
+  font-size: 28px;
   top: 7%;
   left: 40%;
   z-index: 3;
-  color:  var(--color-hover);
-    text-shadow: 
-    0 0 3px var(--color-soft),
-    0 0 6px var(--color-glow);
+  font-family: 'Cinzel', 'Georgia', serif;
+  font-weight: 700;
+  letter-spacing: 4px;
+  font-variant: small-caps;
+  color: var(--color-hover, #e8d8b0);
+  text-shadow: 
+    3px 3px 0px rgba(0, 0, 0, 0.4),
+    0 0 8px var(--color-glow, rgba(0,0,0,0.3));
+  background: linear-gradient(135deg, #f5e6c8, #e8d8b0);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  text-shadow: none;
+  position: absolute;
 }
+
+/* Versión alternativa con color sólido (más legible) */
+.cardTitleSolid {
+  position: absolute;
+  font-size: 28px;
+  top: 7%;
+  left: 40%;
+  z-index: 3;
+  font-family: 'Cinzel', 'Georgia', serif;
+  font-weight: 700;
+  letter-spacing: 4px;
+  font-variant: small-caps;
+  color: var(--color-hover, #e8d8b0);
+  text-shadow: 
+    2px 2px 4px rgba(0, 0, 0, 0.5),
+    0 0 10px var(--color-glow, rgba(0,0,0,0.2));
+}
+
+/* SUBTÍTULOS - Estilo pergamino */
 .subTitle {
-margin: 0;
-padding: 0;
-  color:  var(--color-hover);
-    text-shadow: 
-    0 0 3px var(--color-soft),
-    0 0 6px var(--color-glow);
+  margin: 0;
+  padding: 0;
+  font-family: 'Cinzel', 'Georgia', serif;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  font-variant: small-caps;
+  color: var(--color-main, #d4b86a);
+  text-shadow: 
+    1px 1px 2px rgba(0, 0, 0, 0.6),
+    0 0 4px var(--color-glow-soft, rgba(0,0,0,0.2));
+  border-left: 3px solid var(--color-main, #b89a4a);
+  padding-left: 12px;
+  margin-bottom: 12px;
+}
+
+/* DESCRIPCIÓN - Estilo carta antigua */
+.cardDescription {
+  font-family: 'Playfair Display', 'Georgia', serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #e8d8b0;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
+  font-style: italic;
+  margin: 0 0 15px 0;
+  letter-spacing: 0.3px;
 }
 
 .cardImage {
@@ -108,9 +109,10 @@ padding: 0;
   transform: translate(-50%, -50%);
   width: 950px;
   z-index: 1;
+  filter: drop-shadow(0 0 8px var(--color-glow-soft, rgba(0,0,0,0.2)));
 }
 
-.contenedor{
+.contenedor {
   display: flex;
   flex-direction: column;
   justify-content: space-around; 
@@ -119,36 +121,80 @@ padding: 0;
   z-index: 3;
   margin-top: 0;
   font-size: 16px;
- 
+  font-family: 'Playfair Display', 'Georgia', serif;
+  color: var(--color-hover, #e8d8b0);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  line-height: 1.5;
 }
 
-.proyecto{
-  position: relative;
-    width: 150px;
-    height: 150px;
-    z-index: 3;
-   margin-left: 40px;
-   margin-right: 20px;
+/* Tecnologías - Estilo pergamino */
+.tecnologias {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 12px;
+}
 
+.tecnologia {
+  display: inline-block;
+  padding: 5px 14px;
+  background: rgba(0, 0, 0, 0.5);
+  border: 1px solid var(--color-main, #b89a4a);
+  border-radius: 25px 5px 25px 5px;
+  font-size: 11px;
+  font-family: 'Cinzel', 'Georgia', serif;
+  font-weight: 500;
+  letter-spacing: 1px;
+  color: var(--color-main, #e8d8b0);
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+
+.tecnologia:hover {
+  background: rgba(0, 0, 0, 0.7);
+  border-color: var(--color-hover, #b89a4a);
+  color: var(--color-hover, white);
+  transform: translateY(-2px);
+  letter-spacing: 1.5px;
+}
+
+/* PROYECTOS */
+.proyecto {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  z-index: 3;
+  margin-left: 40px;
+  margin-right: 20px;
   background-size: cover;
   background-position: center;
+  border-radius: 12px;
+  border: 2px solid var(--color-main, #b89a4a);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
 
+.proyecto:hover {
+  border-color: var(--color-hover, #b89a4a);
+  box-shadow: 0 0 15px var(--color-glow, rgba(0,0,0,0.3));
+  transform: scale(1.02);
+}
+
+.muestra {
+  width: 148px;
+  height: 148px;
   border-radius: 8px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
 
-  box-shadow:
-    0 0 10px rgba(255,255,255,0.2),
-    0 0 20px rgba(168,85,247,0.2);
+.muestra:hover {
+  transform: scale(1.05);
+}
 
-
-    }
-
-    .muestra{
-      width: 148px;
-      height: 148px;
-      border-radius: 8px;
-    
-    }
-
+/* LAYOUTS */
 .singleLayout {
   display: flex;
   flex-direction: row;
@@ -159,31 +205,28 @@ padding: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
-
 }
+
 .multiLayout .proyectosContainer {
-transform: none;
-display: flex;
-margin-top: 20px;
- 
+  transform: none;
+  display: flex;
+  margin-top: 20px;
 }
 
 .multiLayout .proyectosContainer .proyecto {
- 
-    width: 130px;
+  width: 130px;
   height: 100px;
   margin: 10px;
 }
 
 .multiLayout .proyectosContainer .proyecto .muestra {
- width: 130px;
-height: 100px;
-  
+  width: 130px;
+  height: 100px;
 }
- .multiLayout .proyectosContainer .proyecto .muestra:hover {
+
+.multiLayout .proyectosContainer .proyecto .muestra:hover {
   transform: scale(1.05);
   transition: transform 0.3s ease;
-  
 }
 
 .multiLayout .contenedor {
@@ -191,35 +234,87 @@ height: 100px;
   height: auto;
   align-items: center;
   text-align: center;
-
 }
-.multiLayout .contenedor p div{
+
+.multiLayout .contenedor p div {
   margin: 5px;
 }
+
 .multiLayout .actions {
   justify-content: center;
 }
-
-
 
 .card {
   animation: aparecer 0.4s ease;
 }
 
-.actions  {
+/* BOTONES DE ACCIÓN */
+.actions {
   display: flex;
   justify-content: center;
-  gap: 16px;
-  margin-bottom:20px;
+  gap: 20px;
+  margin-bottom: 20px;
+  margin-top: 15px;
 }
 
-
+/* Botón estilo pergamino oscuro CON TEMAS */
 .actions button {
   position: relative;
-  font-size: 16px;
+  font-size: 14px;
+  padding: 10px 28px;
+  font-family: 'Cinzel', 'Georgia', serif;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  cursor: pointer;
+  
+  /* Base pergamino oscuro */
+  background: linear-gradient(135deg, #3a2a1a, #2a1a0a);
+  color: var(--color-main, #e8d8b0);
+  border: 1px solid var(--color-main, #b89a4a);
+  border-radius: 25px 5px 25px 5px;
+  
+  /* Textura */
+  background-image: repeating-linear-gradient(45deg, transparent, transparent 2px, rgba(255, 255, 200, 0.03) 2px, rgba(255, 255, 200, 0.03) 4px);
+  
+  /* Sombras */
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 200, 0.1);
+  text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.6);
+  
+  transition: all 0.3s ease;
 }
 
-.oculto{
+/* Borde interior */
+.actions button::before {
+  content: '';
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  right: 4px;
+  bottom: 4px;
+  border: 1px solid rgba(184, 154, 74, 0.3);
+  border-radius: 21px 2px 21px 2px;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+/* Hover del botón CON TEMA */
+.actions button:hover {
+  transform: translateY(-2px);
+  background: linear-gradient(135deg, #4a3a2a, #3a2a1a);
+  color: var(--color-hover, white);
+  border-color: var(--color-hover, #b89a4a);
+  box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 200, 0.2);
+  text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.8), 0 0 8px var(--color-glow);
+  letter-spacing: 4px;
+}
+
+.actions button:hover::before {
+  border-color: var(--color-hover, #b89a4a);
+  box-shadow: 0 0 6px var(--color-glow);
+}
+
+.oculto {
   display: none;
 }
 
@@ -228,7 +323,7 @@ a {
   color: inherit;
 }
 
-
+/* ANIMACIONES */
 @keyframes aparecer {
   from {
     transform: scale(0.8);
@@ -237,5 +332,61 @@ a {
   to {
     transform: scale(1);
     opacity: 1;
+  }
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 768px) {
+  .actions button {
+    padding: 8px 20px;
+    font-size: 11px;
+    letter-spacing: 2px;
+  }
+  
+  .proyecto {
+    width: 120px;
+    height: 120px;
+    margin-left: 20px;
+    margin-right: 10px;
+  }
+  
+  .muestra {
+    width: 118px;
+    height: 118px;
+  }
+  
+  .cardTitle {
+    font-size: 20px;
+    top: 5%;
+    left: 35%;
+    letter-spacing: 2px;
+  }
+  
+  .cardTitleSolid {
+    font-size: 20px;
+    top: 5%;
+    left: 35%;
+    letter-spacing: 2px;
+  }
+  
+  .contenedor {
+    width: 250px;
+    height: auto;
+    font-size: 12px;
+  }
+  
+  .subTitle {
+    font-size: 14px;
+    letter-spacing: 1px;
+  }
+  
+  .tecnologia {
+    font-size: 9px;
+    padding: 3px 10px;
+    letter-spacing: 0.5px;
+  }
+  
+  .cardDescription {
+    font-size: 12px;
   }
 }
