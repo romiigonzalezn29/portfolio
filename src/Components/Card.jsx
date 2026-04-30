@@ -26,10 +26,10 @@ const isMultiProject = projects && projects.length > 1;
     "--color-glow-soft": theme.glowSoft
   }}>
   <div className={s.blur} ></div>
-    <img src={marco} alt={title} className={s.cardImage}/>
 
 
   <div className={`${s.card} ${isMultiProject ? s.multiLayout : s.singleLayout}`} onClick={(e) => e.stopPropagation()}>
+
 
   <h3 className={s.cardTitle}>{title}</h3>
     

@@ -10,6 +10,7 @@
   z-index: 1000;
   background: rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(4px);
+  padding: 20px;
 }
 
 .blur {
@@ -27,22 +28,27 @@
   align-items: center;
   border-radius: 16px;
   padding: 40px;
-  max-width: 900px;
+  width: 100%;
+  max-width: fit-content;
   animation: slideUp 0.3s ease;
   overflow: hidden;
+  background: var(--bg-card, #faf3e6);
+  border: 1px solid var(--border, #c9b896);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
 }
 
-/* ========== IMAGEN DE FONDO  ========== */
+/* ========== IMAGEN DE FONDO ========== */
 .cardImage {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 900px;
- 
+  width: 100%;
+  max-width: 900px;
+  height: auto;
   object-fit: contain;
   z-index: 0;
-  
+  opacity: 0.15;
   pointer-events: none;
 }
 
@@ -62,6 +68,7 @@
   border-radius: 30px;
   z-index: 10;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  white-space: nowrap;
 }
 
 .subTitle {
@@ -137,6 +144,7 @@
   overflow: hidden;
   transition: all 0.2s ease;
   background: white;
+  flex-shrink: 0;
 }
 
 .proyecto:hover {
@@ -171,8 +179,11 @@
 }
 
 .multiLayout .cardTitle {
-position: static;
-margin: 0;
+  position: static;
+  margin: 0 0 20px 0;
+  white-space: normal;
+  text-align: center;
+  display: inline-block;
 }
 
 .multiLayout .proyectosContainer {
@@ -180,10 +191,8 @@ margin: 0;
   flex-wrap: wrap;
   justify-content: center;
   gap: 15px;
-  margin: 10px;
-  
+  margin: 10px 0;
 }
-
 
 .multiLayout .proyectosContainer .proyecto {
   width: 130px;
@@ -192,13 +201,13 @@ margin: 0;
 }
 
 .multiLayout .contenedor {
-  width: 80%;
-  
+  width: 100%;
+  max-width: 500px;
 }
 
 .multiLayout .actions {
   justify-content: center;
-  margin: 10px;
+  
 }
 
 /* ========== BOTONES ========== */
@@ -207,6 +216,7 @@ margin: 0;
   justify-content: flex-start;
   gap: 16px;
   margin-top: 24px;
+  flex-wrap: wrap;
 }
 
 .actions button {
@@ -253,32 +263,171 @@ a {
 }
 
 /* ========== RESPONSIVE ========== */
-@media (max-width: 768px) {
+
+/* Tablet */
+@media (max-width: 900px) {
   .card {
-    flex-direction: column;
-    padding: 30px 20px;
+    max-width: 95vw;
+    padding: 30px 25px;
+  }
+  
+  .cardImage {
+    max-width: 95vw;
   }
   
   .singleLayout {
-    flex-direction: column;
+    gap: 20px;
   }
   
   .proyecto {
-    margin: 0 0 20px 0;
+    width: 130px;
+    height: 130px;
+    margin-right: 20px;
+  }
+  
+  .contenedor {
+    width: 280px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .overlay {
+    padding: 16px;
+    align-items: flex-start;
+    overflow-y: auto;
+  }
+  
+  .card {
+    flex-direction: column;
+    padding: 25px 20px;
+    max-width: 100%;
+    margin-top: 40px;
+  }
+  
+  /* Single layout en mobile */
+  .singleLayout {
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .singleLayout .proyecto {
+    margin: 0 0 15px 0;
+    width: 140px;
+    height: 140px;
+  }
+  
+  /* Título en mobile */
+  .cardTitle {
+    position: static;
+    text-align: center;
+    white-space: normal;
+    margin-bottom: 20px;
+    font-size: 20px;
+    display: inline-block;
+    width: auto;
+  }
+  
+  /* Multilayout mobile */
+  .multiLayout .cardTitle {
+    margin-top: 0;
+  }
+  
+  .multiLayout .proyectosContainer .proyecto {
+    width: 100px;
+    height: 80px;
+  }
+  
+  /* Contenedor de texto */
+  .contenedor {
+    width: 100%;
+    text-align: center;
+  }
+  
+  .subTitle {
+    text-align: left;
+  }
+  
+  .cardDescription {
+    text-align: left;
+    font-size: 13px;
+  }
+  
+  /* Tecnologías */
+  .tecnologias {
+    justify-content: center;
+  }
+  
+  .tecnologia {
+    font-size: 10px;
+    padding: 3px 10px;
+  }
+  
+  /* Botones */
+  .actions {
+    justify-content: center;
+  }
+  
+  .actions button {
+    padding: 6px 20px;
+    font-size: 12px;
+  }
+}
+
+/* Mobile pequeño */
+@media (max-width: 480px) {
+  .card {
+    padding: 20px 16px;
   }
   
   .cardTitle {
     font-size: 18px;
-    top: -12px;
-    left: 20px;
     padding: 4px 16px;
   }
   
-  .contenedor {
-    width: 100%;
+  .subTitle {
+    font-size: 11px;
   }
   
-  .actions {
-    justify-content: center;
+  .cardDescription {
+    font-size: 12px;
+  }
+  
+  .proyecto {
+    width: 110px !important;
+    height: 110px !important;
+  }
+  
+  .multiLayout .proyectosContainer .proyecto {
+    width: 85px !important;
+    height: 70px !important;
+  }
+  
+  .tecnologia {
+    font-size: 9px;
+    padding: 2px 8px;
+  }
+  
+  .actions button {
+    padding: 5px 16px;
+    font-size: 11px;
+  }
+}
+
+/* Desktop grande */
+@media (min-width: 1200px) {
+ 
+  
+  .cardImage {
+    max-width: 1000px;
+  }
+  
+  .proyecto {
+    width: 170px;
+    height: 170px;
+  }
+  
+  .contenedor {
+    width: 360px;
   }
 }
