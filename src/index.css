@@ -1,5 +1,5 @@
 
-  .body, button{
+  .body{
     font-family: 'Cinzel Decorative', serif;
     font-weight: 500;
     font-style: normal;
@@ -10,3 +10,43 @@
     background-color: black;
   }
 
+button{
+    font-family: 'Cinzel Decorative', serif;
+
+}
+
+/* Paleta Pergamino Claro - Dark Text */
+:root {
+  /* Fondos claros */
+  --bg-parchment: #f5ecd9;     /* Pergamino base */
+  --bg-card: #faf3e6;          /* Card más claro */
+  --bg-overlay: rgba(0, 0, 0, 0.6);
+  
+  /* Textos oscuros - ALTO CONTRASTE */
+  --text-primary: #2c2418;     /* Casi negro/marrón oscuro */
+  --text-secondary: #4a3a2a;   /* Marrón medio */
+  --text-muted: #6b5a4a;       /* Marrón suave */
+  
+  /* Acentos elegantes */
+  --accent-gold: #8b6914;      /* Dorado más intenso */
+  --accent-rust: #a0522d;      /* Terracota */
+  --border: #c9b896;           /* Borde suave */
+  
+  /* Sombras sutiles */
+  --shadow: rgba(0, 0, 0, 0.1);
+
+   /* Paleta Pergamino Claro - Dark Text */
+  --bg-parchment: #f5ecd9;
+  --bg-card: #faf3e6;
+  --bg-overlay: rgba(0, 0, 0, 0.6);
+  
+  --text-primary: #2c2418;
+  --text-secondary: #4a3a2a;
+  --text-muted: #6b5a4a;
+  
+  --accent-gold: #8b6914;
+  --accent-rust: #a0522d;
+  --border: #c9b896;
+  
+  --shadow: rgba(0, 0, 0, 0.1);
+}

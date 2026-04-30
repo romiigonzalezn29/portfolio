@@ -12,6 +12,16 @@ export const proyectos = {
     image: ruleta,
     link: "https://bariatric-trivia.vercel.app/"
   },
+  book: {
+    title: "Sobre mi",
+    description: "Hola! Soy una desarrolladora web enfocada en crear interfaces interactivas y experiencias visuales atractivas, combinando diseño y lógica para construir aplicaciones dinámicas y funcionales.",
+    technologies: ["Busco seguir creciendo como desarrolladora frontend, participando en proyectos donde pueda aportar soluciones creativas y mejorar la experiencia de las personas."],
+    image: yo,
+    link: "https://www.linkedin.com/in/romina-gonzalez-38a196232/",
+    sectionTitle1: "¿Quién soy?",
+    sectionTitle2: "Objetivo"
+
+  },
   house: {
     title: "Sobre mi",
     description: "Hola! Soy una desarrolladora web enfocada en crear interfaces interactivas y experiencias visuales atractivas, combinando diseño y lógica para construir aplicaciones dinámicas y funcionales.",

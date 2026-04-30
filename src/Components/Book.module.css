@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap');
+
+/* ========== OVERLAY ========== */
 .overlay {
   position: fixed;
   inset: 0;
@@ -5,18 +8,17 @@
   justify-content: center;
   align-items: center;
   z-index: 9999;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(4px);
 }
 
 .blur {
   position: fixed;
   inset: 0;
-  backdrop-filter: blur(6px);
-  background: rgba(0, 0, 0, 0.3);
   z-index: 1;
-  cursor: pointer;
 }
 
-/* CONTENEDOR */
+/* ========== CONTENEDOR ========== */
 .container {
   position: relative;
   display: flex;
@@ -24,289 +26,247 @@
   align-items: center;
   justify-content: center;
   z-index: 2;
-  animation: fadeIn 0.4s ease;
+  animation: fadeIn 0.3s ease;
 }
 
-/* BOTÓN CERRAR */
+/* ========== BOTÓN CERRAR ========== */
 .closeButton {
   position: absolute;
- top: 80px;
- right: 150px;
-  background: rgba(0, 0, 0, 0.7);
-  color: white;
-  border: none;
+  top: 80px;
+  right: 150px;
+  width: 36px;
+  height: 36px;
+  background: var(--bg-parchment);
+  color: var(--text-secondary);
+  border: 1px solid var(--border);
   border-radius: 50%;
-  width: 35px;
-  height: 35px;
-  font-size: 20px;
+  font-size: 18px;
   cursor: pointer;
-
   display: flex;
   align-items: center;
   justify-content: center;
-
   transition: all 0.2s ease;
   z-index: 1020;
 }
 
 .closeButton:hover {
-  background: rgba(0, 0, 0, 0.9);
-  transform: scale(1.15) rotate(10deg);
+  background: var(--accent-gold);
+  color: white;
+  transform: scale(1.05);
 }
 
-/* LIBRO */
+/* ========== LIBRO ========== */
 .bookimage {
   display: block;
   height: 600px;
   z-index: 2;
   pointer-events: none;
+  filter: drop-shadow(0 8px 20px var(--shadow));
 }
 
-/*TITULO*/
-
+/* ========== TÍTULOS ========== */
 .title {
-  font-family: "Cinzel", serif; /* o cualquier serif elegante */
-  font-size: 26px;
-  letter-spacing: 2px;
-
-  color: #5b3a19;
-
-  text-shadow:
-    0 1px 0 rgba(255,255,255,0.3),
-    0 2px 3px rgba(0,0,0,0.3);
-
-  margin-bottom: 10px;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 28px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: var(--text-primary);
+  margin-bottom: 16px;
+  border-bottom: 2px solid var(--accent-gold);
+  display: inline-block;
+  padding-bottom: 6px;
 }
-
-.title::after {
-  content: "";
-  display: block;
-  width: 60%;
-  height: 2px;
-
-  margin-top: 6px;
-
-  background: linear-gradient(
-    to right,
-    transparent,
-    #c9a875,
-    transparent
-  );
-}
-
-.title::before{
-  content: "✦";
-  margin: 0 8px;
-  color: #c9a875;
-}
-
 
 .subtitle {
-  font-size: 16px;
-  font-weight: bold;
-
-  color: #6e4a26;
-
-  margin-top: 15px;
-  margin-bottom: 6px;
-
-  border-left: 3px solid #c9a875;
-  padding-left: 8px;
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--accent-gold);
+  margin-top: 20px;
+  margin-bottom: 12px;
 }
 
-/* TABS */
+/* ========== TABS ========== */
+
+.skillTab{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
 .tabs {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 8px;
   z-index: 3;
-  margin-left: -110px;
+  margin-left: -100px;
 }
 
 .tab {
-  background: linear-gradient(145deg, #d9c7a3, #b89a6b);
-  color: #5b3a19;
-
-  padding: 12px 20px;
-  border: none;
-  width: 120px;
-  border-radius: 0 10px 10px 0;
-
-  font-size: 15px;
-  font-weight: bold;
-  font-family: serif;
-
+  background: rgba(245, 236, 217, 0.8);
+  color: var(--text-secondary);
+  padding: 10px 20px;
+  border: 1px solid var(--border);
+  width: 130px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  font-family: 'Inter', sans-serif;
+  letter-spacing: 1px;
   cursor: pointer;
-
-  box-shadow:
-    inset 0 1px 2px rgba(255, 255, 255, 0.4),
-    inset 0 -2px 4px rgba(0, 0, 0, 0.4);
-
-  transition: all 0.25s ease;
+  transition: all 0.2s ease;
+  text-align: left;
 }
 
-/* HOVER TAB */
 .tab:hover {
-  transform: translateX(-6px);
-  background: linear-gradient(145deg, #e6d6b8, #c9a875);
+  background: var(--accent-gold);
+  border-color: var(--accent-gold);
+  color: white;
+  transform: translateX(4px);
 }
 
-/* TAB ACTIVA */
 .active {
-  background: #f5e6c8;
-  transform: translateX(-12px);
-
-  box-shadow:
-    0 0 12px rgba(255, 220, 150, 0.6),
-    inset 0 1px 2px rgba(255,255,255,0.4);
+  background: var(--accent-gold);
+  border-color: var(--accent-gold);
+  color: white;
 }
 
-
-
-
-/* CONTENIDO */
+/* ========== CONTENIDO ========== */
 .content {
   position: absolute;
-  top: 18%;   /* punto fijo dentro del libro */
+  top: 18%;
   left: 18%;
-
   width: 64%;
   height: 60%;
-
   display: grid;
-  
-  gap: 30px;
-
+  gap: 24px;
   z-index: 1020;
+  overflow-y: auto;
+  padding-right: 20px;
 }
 
-/* INTRO TEXTO */
+/* Scroll elegante */
+.content::-webkit-scrollbar {
+  width: 4px;
+}
+
+.content::-webkit-scrollbar-track {
+  background: var(--border);
+}
+
+.content::-webkit-scrollbar-thumb {
+  background: var(--accent-gold);
+}
+
+/* ========== INTRO ========== */
 .intro {
-  position: relative;
-  max-width: 220px;
- 
-
-  line-height: 1.4;
-  font-size: 15px;
-
-  text-shadow: 0 1px 0 rgba(255,255,255,0.3);
+  max-width: 240px;
+  line-height: 1.6;
+  font-size: 14px;
+  font-family: 'Inter', sans-serif;
+  color: var(--text-secondary);
 }
 
-/* SKILLS */
+/* ========== SKILLS ========== */
 .skillsContainer {
-  max-width: 290px;
-  margin-left: 110px;
+  max-width: 320px;
+  margin-left: 80px;
 }
 
-.skillTab{
-display: flex;
-flex-direction: row;
-position: relative;
-
-}
-
-/* ITEM SKILL */
 .skill {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start; /* ✅ Se pega a la izquierda */
   align-items: center;
-  margin: 10px 10px;
-
-  font-size: 15px;
-  letter-spacing: 0.5px;
-
-  transition: transform 0.2s ease;
+  gap: 40px; /* ✅ Espacio CONTROLADO entre texto y bloques */
+  margin: 8px 0; /* ✅ Margen más compacto */
+  font-size: 13px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  color: var(--text-primary);
+  letter-spacing: 0.3px;
 }
 
-/* HOVER skill (muy sutil) */
+/* Opcional: ancho fijo para que todos los textos arranquen igual */
+.skill span:first-child {
+  min-width: 95px;
+}
+
 .skill:hover {
-  transform: translateX(5px);
+  color: var(--accent-gold);
 }
 
-/* BARRA DE NIVEL */
 .level {
   display: flex;
-  gap: 7px;
-  margin: 5px 5px;
-
+  gap: 5px;
 }
 
-/* BLOQUE LLENO */
 .block {
-  width: 14px;
-  height: 14px;
-
-  background: linear-gradient(145deg, #d9c7a3, #b89a6b);
-
-  box-shadow:
-    inset 0 1px 2px rgba(255, 255, 255, 0.4),
-    inset 0 -2px 3px rgba(0, 0, 0, 0.5),
-    0 0 6px rgba(255, 220, 150, 0.3);
-
+  width: 10px;
+  height: 10px;
+  background: var(--accent-gold);
+  opacity: 0.8;
   transition: all 0.2s ease;
 }
 
-/* animación leve al hover */
 .skill:hover .block {
-  transform: scale(1.1);
+  opacity: 1;
+  transform: scaleY(1.2);
 }
 
-/* BLOQUE VACÍO */
 .blockEmpty {
-  width: 14px;
-  height: 14px;
-
-  background: #3a2a1a;
-  opacity: 0.35;
-
-  box-shadow:
-    inset 0 1px 2px rgba(0,0,0,0.5);
+  width: 10px;
+  height: 10px;
+  background: var(--border);
+  opacity: 0.5;
 }
 
-
-
-/*SOFTSKILS*/
-
-.soft{
-  position: relative;
- 
-}
-
-
+/* ========== SOFT SKILLS ========== */
 .softItem {
-  
-  margin-bottom: 14px;
-  
-  display: flex;
-  flex-direction: column;
+  margin-bottom: 16px;
 }
 
 .softTitle {
-  font-weight: bold;
-  color: #5b3a19;
-  font-size: 15px;
-
-  border-left: 1px solid #c9a875;
-  padding-left: 8px;
-
-  margin: 0px;
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--accent-gold);
+  margin: 0 0 6px 0;
 }
 
 .softDesc {
-  font-size: 14px;
-  line-height: 1.4;
-  opacity: 0.85;
-  margin: 5px;
+  font-size: 12px;
+  font-family: 'Inter', sans-serif;
+  line-height: 1.5;
+  color: var(--text-secondary);
+  margin: 0;
 }
 
-/* ANIMACIONES */
+/* ========== ANIMACIONES ========== */
 @keyframes fadeIn {
   from {
     opacity: 0;
-    transform: translateY(10px);
+    transform: translateY(8px);
   }
   to {
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 1024px) {
+  .bookimage { height: 520px; }
+  .content { top: 16%; left: 16%; width: 68%; }
+  .closeButton { top: 70px; right: 130px; }
+}
+
+@media (max-width: 768px) {
+  .bookimage { height: 420px; }
+  .tabs { margin-left: -70px; }
+  .tab { width: 100px; padding: 8px 12px; font-size: 11px; }
+  .content { top: 14%; left: 14%; width: 72%; }
+  .skillsContainer { margin-left: 40px; }
+  .closeButton { top: 20px; right: 20px; }
+  .title { font-size: 22px; }
 }

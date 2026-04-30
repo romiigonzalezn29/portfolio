@@ -1,8 +1,6 @@
 /* Contenedor principal del NPC */
 .npcContainer {
-  position: absolute;
-  bottom: 50%;
-  right: 40%;
+ position: absolute;
   z-index: 100;
   cursor: pointer;
 }
@@ -72,96 +70,6 @@
   opacity: 1;
 }
 
-/* Nombre del personaje */
-.npcName {
-  text-align: center;
-  font-family: 'Cinzel', serif;
-  font-size: 12px;
-  color: #d8b4fe;
-  margin-top: 8px;
-  background: rgba(26, 10, 42, 0.8);
-  padding: 4px 12px;
-  border-radius: 20px;
-  white-space: nowrap;
-  border: 1px solid #a855f7;
-  display: flex;
-  flex-direction: column;
-  gap: 2px;
-}
-
-.npcTitle {
-  font-size: 9px;
-  color: #a855f7;
-}
-
-/* Grimorio (diálogo) */
-.grimoire {
-  position: absolute;
-  bottom: 120px;
-  left: 0; /* Cambiado de right a left para que siga al personaje */
-  width: 320px;
-  max-height: 450px;
-  background: linear-gradient(135deg, #2a1a3a, #1a0a2a);
-  border: 2px solid #a855f7;
-  border-radius: 20px 8px 20px 8px;
-  padding: 20px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-  animation: aparecer 0.3s ease;
-  overflow-y: auto;
-  backdrop-filter: blur(4px);
-}
-
-/* Ajuste de la burbuja para when el grimorio está a la izquierda */
-.grimoire::before {
-  content: '';
-  position: absolute;
-  bottom: -15px;
-  left: 35px; /* Cambiado de right a left */
-  border-width: 15px 10px 0 10px;
-  border-style: solid;
-  border-color: #a855f7 transparent transparent transparent;
-}
-
-.grimoire::after {
-  content: '';
-  position: absolute;
-  bottom: -11px;
-  left: 36px; /* Cambiado de right a left */
-  border-width: 11px 9px 0 9px;
-  border-style: solid;
-  border-color: #2a1a3a transparent transparent transparent;
-}
-
-.closeBtn {
-  position: absolute;
-  top: 10px;
-  right: 15px;
-  background: none;
-  border: none;
-  color: #a855f7;
-  font-size: 18px;
-  cursor: pointer;
-  font-family: monospace;
-}
-
-.closeBtn:hover {
-  color: #d8b4fe;
-}
-
-/* Scroll personalizado */
-.grimoire::-webkit-scrollbar {
-  width: 5px;
-}
-
-.grimoire::-webkit-scrollbar-track {
-  background: #1a0a2a;
-}
-
-.grimoire::-webkit-scrollbar-thumb {
-  background: #a855f7;
-  border-radius: 3px;
-}
-
 /* Animación del grimorio */
 @keyframes aparecer {
   from {
@@ -183,16 +91,9 @@
 
 /* Responsive */
 @media (max-width: 768px) {
-  .npcContainer {
-    bottom: 5%;
-    left: 3%;
-  }
+ 
   
-  .spriteAnimation {
-    width: 70px;
-    height: 70px;
-  }
-  
+
   .grimoire {
     width: 280px;
     max-height: 400px;

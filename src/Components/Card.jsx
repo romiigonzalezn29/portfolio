@@ -78,7 +78,7 @@ const isMultiProject = projects && projects.length > 1;
     </button>
     
 
-  <button className={`${s.closeBtn} ${s.btnTheme}`} onClick={onClose}>
+  <button className={` ${s.closeBtn} ${s.btnTheme}`} onClick={onClose}>
     Cerrar
   </button>
 </div>

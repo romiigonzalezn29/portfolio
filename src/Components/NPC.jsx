@@ -1,20 +1,19 @@
-// NPC.jsx modificado
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect } from 'react';
 import s from './NPC.module.css';
 import sorceressSprite from '../assets/pj2-animacion.png';
+import CharacterPanel from './CharacterPanel';
 
 export default function NPC() {
-  const [isDialogOpen, setIsDialogOpen] = useState(false);
+  const [isPanelOpen, setIsPanelOpen] = useState(false);
   const [frame, setFrame] = useState(0);
-  const animationRef = useRef(null);
-  
+
   // Configuración de tu sprite sheet 6x6
   const SPRITE_WIDTH = 96;    // Ancho de cada fotograma
   const SPRITE_HEIGHT = 96;   // Alto de cada fotograma
   const COLS = 6;             // 6 columnas
   const ROWS = 6;             // 6 filas
   const TOTAL_FRAMES = COLS * ROWS; // 36 fotogramas
-  const FRAME_DURATION = 50;  // Duración por fotograma en ms (ajústalo)
+  const FRAME_DURATION = 50;  // Duración por fotograma en ms
 
   // Animación con JavaScript
   useEffect(() => {
@@ -35,32 +34,28 @@ export default function NPC() {
   };
 
   return (
-    <div className={s.npcContainer}>
-      <div 
-        className={s.spriteAnimation}
-        style={{ 
-          backgroundImage: `url(${sorceressSprite})`,
-          backgroundPosition: getBackgroundPosition(),
-          backgroundSize: `${SPRITE_WIDTH * COLS}px ${SPRITE_HEIGHT * ROWS}px`
-        }}
-        onClick={() => setIsDialogOpen(!isDialogOpen)}
-      >
-        <div className={s.clickHint}>💬</div>
-      </div>
-      
-      {/* Resto del componente igual... */}
-      <div className={s.npcName}>
-        Lyra
-        <span className={s.npcTitle}>Hechicera de Código</span>
+    <>
+      <div className={s.npcContainer}>
+        <div 
+          className={s.spriteAnimation}
+          style={{ 
+            backgroundImage: `url(${sorceressSprite})`,
+            backgroundPosition: getBackgroundPosition(),
+            backgroundSize: `${SPRITE_WIDTH * COLS}px ${SPRITE_HEIGHT * ROWS}px`
+          }}
+          onClick={() => setIsPanelOpen(true)} // ✅ Abre el Character Panel directamente
+        >
+          <div className={s.clickHint}>💬</div>
+        </div>
+        
+        
       </div>
 
-      {isDialogOpen && (
-        <div className={s.grimoire}>
-          <button className={s.closeBtn} onClick={() => setIsDialogOpen(false)}>✕</button>
-          <div className={s.greeting}>✨ ¡Saludos, viajero/a digital! ✨</div>
-          <div className={s.intro}>Soy una tejedora de código...</div>
-        </div>
-      )}
-    </div>
+      {/* Character Panel - SOLO UNO, sin duplicados */}
+      <CharacterPanel 
+        isOpen={isPanelOpen}
+        onClose={() => setIsPanelOpen(false)}
+      />
+    </>
   );
 }

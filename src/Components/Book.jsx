@@ -42,8 +42,11 @@ export default function Book({ onClose }) {
             <div className={s.skillTab}>
               <div className={s.intro}>
               <h3 className={s.title}>SKILLS</h3>
-              <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis ipsum deserunt saepe voluptatibus enim tempore voluptas odio dignissimos libero, consequatur similique incidunt explicabo odit error dolores cupiditate! Consequatur, debitis? Deserunt!</p>
-
+            <p>
+  Experiencia en desarrollo web full stack con foco en frontend y lógica de negocio. 
+  Trabajo en la construcción de interfaces funcionales, integración de sistemas y 
+  procesamiento de datos, aplicando buenas prácticas y una visión orientada a soluciones reales.
+</p>
               </div>
               
               
@@ -127,8 +130,11 @@ export default function Book({ onClose }) {
             <div className={s.skillTab}>
               <div className={s.intro}>
               <h3 className={s.title}>TOOLS</h3>
-              <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis ipsum deserunt saepe voluptatibus enim tempore voluptas odio dignissimos libero, consequatur similique incidunt explicabo odit error dolores cupiditate! Consequatur, debitis? Deserunt!</p>
-
+              <p>
+  Manejo de herramientas y tecnologías utilizadas en entornos de desarrollo, gestión de proyectos 
+  y diseño de producto. Me permiten organizar procesos, colaborar con equipos y construir soluciones 
+  eficientes de forma integral.
+</p>
               </div>
               
               
@@ -222,9 +228,9 @@ export default function Book({ onClose }) {
             <div className={s.skillTab}>
               <div className={s.intro}>
               <h3 className={s.title}>SOFTSKILLS</h3>
-              <p>
-  Me enfoco en entender problemas reales y transformarlos en soluciones claras, combinando
-  pensamiento analítico, experiencia técnica y una fuerte orientación al usuario.
+             <p>
+  Me enfoco en entender problemas reales y transformarlos en soluciones claras, combinando 
+  pensamiento analítico, comunicación efectiva y una fuerte orientación al usuario.
 </p>
               </div>
               
