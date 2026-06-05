@@ -21,7 +21,7 @@ export const proyectos = {
     description: "La solución reemplaza tareas manuales realizadas sobre Excel y aplicaciones externas, integrando validación de credenciales, procesamiento de XML médicos y autorización de estudios en una única interfaz. El proyecto permitió reducir errores operativos, mejorar la trazabilidad y optimizar los tiempos administrativos del equipo de facturación.",
     technologies: ["Python", "Pandas", "Streamlit", "XML", "APIs REST"],
     image: hub,
-    link: "https://bariatric-trivia.vercel.app/"
+    link: hub
 
   },
     front: {
