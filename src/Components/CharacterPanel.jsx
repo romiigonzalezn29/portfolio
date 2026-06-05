@@ -29,14 +29,18 @@ export default function CharacterPanel({ isOpen, onClose }) {
   };
 
   return (
-    <div className={s.overlay} onClick={onClose}>
-        <img src={panelImage} alt="" className={s.panelImage} />
+   <div className={s.overlay} onClick={onClose}>
+      <div className={s.panel} onClick={(e) => e.stopPropagation()}>
+        
+        {/* Decoraciones */}
+        <div className={s.topDecoration}>✦ ✦ ✦</div>
+        <div className={s.bottomDecoration}>✦ ✦ ✦</div>
 
-      <div className={s.panel} 
-      onClick={(e) => e.stopPropagation()}>
         {/* Header del personaje */}
         <div className={s.header}>
-          <div className={s.avatar}>{characterData.avatar}</div>
+          
+            <img src={characterData.avatar} alt={characterData.name} className={s.avatar} />
+          
           <div className={s.headerInfo}>
             <h2 className={s.name}>{characterData.name}</h2>
             <p className={s.title}>{characterData.title}</p>
@@ -51,7 +55,7 @@ export default function CharacterPanel({ isOpen, onClose }) {
 
         {/* Cita aleatoria */}
         <div className={s.quote}>
-          <span className={s.quoteIcon}>🔮</span>
+          
           <span className={s.quoteText}>{randomQuote}</span>
           <button className={s.quoteRefresh} onClick={refreshQuote}>↻</button>
         </div>
@@ -62,19 +66,19 @@ export default function CharacterPanel({ isOpen, onClose }) {
             className={`${s.tab} ${activeTab === 'story' ? s.active : ''}`}
             onClick={() => setActiveTab('story')}
           >
-            📜 Historia
+            Historia
           </button>
           <button 
             className={`${s.tab} ${activeTab === 'experience' ? s.active : ''}`}
             onClick={() => setActiveTab('experience')}
           >
-            ⚔️ Aventuras
+            Aventuras
           </button>
           <button 
             className={`${s.tab} ${activeTab === 'contact' ? s.active : ''}`}
             onClick={() => setActiveTab('contact')}
           >
-            📬 Contacto
+            Contacto
           </button>
         </div>
 
@@ -132,7 +136,7 @@ export default function CharacterPanel({ isOpen, onClose }) {
         {activeTab === 'contact' && (
           <div className={s.contactContent}>
             <div className={s.contactCard}>
-              <h3>📫 ¿Cómo contactarme?</h3>
+              <h3>¿Cómo contactarme?</h3>
               <p className={s.contactIntro}>
                 ¿Te interesa mi trabajo o quieres conversar sobre alguna aventura digital?
                 Aquí tienes mis datos de contacto:

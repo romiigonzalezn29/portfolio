@@ -1,49 +1,33 @@
 import ruleta from '../assets/ruleta.gif'
 import hh from '../assets/hh.gif'
 import bioa from '../assets/bioa.gif'
+import hub from '../assets/Hub.gif'
 import yo from '../assets/yo.png'
 import bariatricline from '../assets/bariatricline.gif'
 
 export const proyectos = {
+
+
   interactive: {
     title: "Ruleta Bariátrica",
     description: "Aplicación web diseñada para promover el aprendizaje y la concientización de forma dinámica y accesible, facilitando la incorporación de conocimientos clave relacionados con hábitos y cuidados de salud.",
-    technologies: ["React", "CSS"],
+    technologies: ["Javascript", "CSS","HTML"],
     image: ruleta,
     link: "https://bariatric-trivia.vercel.app/"
   },
-  book: {
-    title: "Sobre mi",
-    description: "Hola! Soy una desarrolladora web enfocada en crear interfaces interactivas y experiencias visuales atractivas, combinando diseño y lógica para construir aplicaciones dinámicas y funcionales.",
-    technologies: ["Busco seguir creciendo como desarrolladora frontend, participando en proyectos donde pueda aportar soluciones creativas y mejorar la experiencia de las personas."],
-    image: yo,
-    link: "https://www.linkedin.com/in/romina-gonzalez-38a196232/",
-    sectionTitle1: "¿Quién soy?",
-    sectionTitle2: "Objetivo"
 
-  },
-  house: {
-    title: "Sobre mi",
-    description: "Hola! Soy una desarrolladora web enfocada en crear interfaces interactivas y experiencias visuales atractivas, combinando diseño y lógica para construir aplicaciones dinámicas y funcionales.",
-    technologies: ["Busco seguir creciendo como desarrolladora frontend, participando en proyectos donde pueda aportar soluciones creativas y mejorar la experiencia de las personas."],
-    image: yo,
-    link: "https://www.linkedin.com/in/romina-gonzalez-38a196232/",
-    sectionTitle1: "¿Quién soy?",
-    sectionTitle2: "Objetivo"
-
-  },
   lab: {
-    title: "Lab Project",
-    description: "Herramienta...",
-    technologies: ["API"],
-    image: '../assets/lab.gif',
+    title: "Hub Prestacional",
+    description: "La solución reemplaza tareas manuales realizadas sobre Excel y aplicaciones externas, integrando validación de credenciales, procesamiento de XML médicos y autorización de estudios en una única interfaz. El proyecto permitió reducir errores operativos, mejorar la trazabilidad y optimizar los tiempos administrativos del equipo de facturación.",
+    technologies: ["Python", "Pandas", "Streamlit", "XML", "APIs REST"],
+    image: hub,
     link: "https://bariatric-trivia.vercel.app/"
 
   },
     front: {
-    title: "Frontend Project",
-    description: "Desarrollo de sitios web del sector salud con foco en experiencia de usuario, diseño responsivo y navegación intuitiva.",
-    technologies: ["React ", "CSS ", "JavaScript ", "Bootstrap "],
+    title: "Desarrollo web",
+    description: "Desarrollo de plataformas web orientadas al ecosistema de salud, combinando experiencia de usuario, identidad visual y soluciones digitales escalables. Los proyectos incluyen sitios corporativos, plataformas institucionales y e-commerce especializados. Se trabajó en arquitectura frontend moderna, integración de servicios y optimización de experiencia multiplataforma.",
+    technologies: ["React ", "JavaScript ", "CSS ", "Bootstrap "],
     image: '../assets/front.gif',
     
     projects: [

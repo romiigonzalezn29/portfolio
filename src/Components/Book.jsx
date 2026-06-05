@@ -59,8 +59,10 @@ export default function Book({ onClose }) {
                     <div className={s.block}></div>
                     <div className={s.block}></div>
                     <div className={s.block}></div>
+                    <div className={s.block}></div>
                     <div className={s.blockEmpty}></div>
                     <div className={s.blockEmpty}></div>
+                
                   </div>
                 </div>
 
@@ -68,6 +70,7 @@ export default function Book({ onClose }) {
                   <span>Javascript</span>
                   <div className={s.level}>
                     
+                    <div className={s.block}></div>
                     <div className={s.block}></div>
                     <div className={s.block}></div>
                     <div className={s.block}></div>
@@ -80,6 +83,7 @@ export default function Book({ onClose }) {
                   <span>CSS</span>
                   <div className={s.level}>
                     
+                    <div className={s.block}></div>
                     <div className={s.block}></div>
                     <div className={s.block}></div>
                     <div className={s.block}></div>
@@ -96,6 +100,8 @@ export default function Book({ onClose }) {
                     <div className={s.block}></div>
                     <div className={s.blockEmpty}></div>
                     <div className={s.blockEmpty}></div>
+                    <div className={s.blockEmpty}></div>
+                    
                   </div>
                 </div>
                 <h4 className={s.subtitle} >BACKEND</h4>
@@ -108,6 +114,7 @@ export default function Book({ onClose }) {
                     <div className={s.block}></div>
                     <div className={s.blockEmpty}></div>
                     <div className={s.blockEmpty}></div>
+                    <div className={s.blockEmpty}></div>
                   </div>
                 </div>
                 <div className={s.skill}>
@@ -117,6 +124,7 @@ export default function Book({ onClose }) {
                     <div className={s.block}></div>
                     <div className={s.block}></div>
                     <div className={s.block}></div>
+                    <div className={s.blockEmpty}></div>
                     <div className={s.blockEmpty}></div>
                     <div className={s.blockEmpty}></div>
                   </div>
@@ -147,6 +155,7 @@ export default function Book({ onClose }) {
                     <div className={s.block}></div>
                     <div className={s.block}></div>
                     <div className={s.block}></div>
+                    <div className={s.block}></div>
                     <div className={s.blockEmpty}></div>
                     <div className={s.blockEmpty}></div>
                   </div>
@@ -161,6 +170,7 @@ export default function Book({ onClose }) {
                     <div className={s.block}></div>
                     <div className={s.blockEmpty}></div>
                     <div className={s.blockEmpty}></div>
+                    <div className={s.blockEmpty}></div>
                   </div>
                 </div>
 
@@ -173,6 +183,7 @@ export default function Book({ onClose }) {
                     <div className={s.block}></div>
                     <div className={s.blockEmpty}></div>
                     <div className={s.blockEmpty}></div>
+                    <div className={s.blockEmpty}></div>
                   </div>
                 </div>
                 <div className={s.skill}>
@@ -182,6 +193,7 @@ export default function Book({ onClose }) {
                     <div className={s.block}></div>
                     <div className={s.block}></div>
                     <div className={s.block}></div>
+                    <div className={s.blockEmpty}></div>
                     <div className={s.blockEmpty}></div>
                     <div className={s.blockEmpty}></div>
                   </div>
@@ -196,6 +208,7 @@ export default function Book({ onClose }) {
                     <div className={s.block}></div>
                     <div className={s.blockEmpty}></div>
                     <div className={s.blockEmpty}></div>
+                    <div className={s.blockEmpty}></div>
                   </div>
                 </div>
                 <div className={s.skill}>
@@ -207,6 +220,7 @@ export default function Book({ onClose }) {
                     <div className={s.block}></div>
                     <div className={s.blockEmpty}></div>
                     <div className={s.blockEmpty}></div>
+                    <div className={s.blockEmpty}></div>
                   </div>
                 </div>
                 <div className={s.skill}>
@@ -216,8 +230,10 @@ export default function Book({ onClose }) {
                     <div className={s.block}></div>
                     <div className={s.block}></div>
                     <div className={s.block}></div>
+                    <div className={s.block}></div>
+                    <div className={s.block}></div>
                     <div className={s.blockEmpty}></div>
-                    <div className={s.blockEmpty}></div>
+                    
                   </div>
                 </div>
               </div>
