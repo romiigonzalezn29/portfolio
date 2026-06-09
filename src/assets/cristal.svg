@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="256" height="256" viewBox="0 0 256 256" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="256" height="256" fill="transparent"/>
+
+  <!-- Glow -->
+  <circle cx="128" cy="128" r="72" fill="#5CE1E6" opacity="0.15"/>
+
+  <!-- Crystal -->
+  <polygon points="128,28 184,92 160,196 96,196 72,92"
+           fill="#62D9FF"/>
+
+  <!-- Crystal shadows -->
+  <polygon points="128,28 184,92 128,120"
+           fill="#A8F0FF"/>
+
+  <polygon points="128,120 160,196 128,172"
+           fill="#2F8CFF"/>
+
+  <polygon points="72,92 128,120 96,196"
+           fill="#3BB8D4"/>
+
+  <!-- Outline -->
+  <polygon points="128,28 184,92 160,196 96,196 72,92"
+           stroke="#2A3A7A"
+           stroke-width="8"
+           stroke-linejoin="round"
+           fill="none"/>
+</svg>
