@@ -1,21 +1,20 @@
-
-  .body{
-    font-family: 'Cinzel Decorative', serif;
-    font-weight: 500;
-    font-style: normal;
-    font-size: 20px;
-  }
-
-  html{
-    background-color: black;
-  }
-
-button{
-    font-family: 'Cinzel Decorative', serif;
-
+.body {
+  font-family: 'Cinzel Decorative', serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 20px;
 }
 
-/* Paleta Pergamino Claro - Dark Text */
+html {
+  background-color: var(--bg-primary);
+  transition: background-color 0.3s ease;
+}
+
+button {
+  font-family: 'Cinzel Decorative', serif;
+}
+
+/* Paleta Pergamino Claro - Dark Text (Tus variables existentes) */
 :root {
   /* Fondos claros */
   --bg-parchment: #f5ecd9;     /* Pergamino base */
@@ -35,7 +34,7 @@ button{
   /* Sombras sutiles */
   --shadow: rgba(0, 0, 0, 0.1);
 
-   /* Paleta Pergamino Claro - Dark Text */
+  /* Paleta Pergamino Claro - Dark Text (Duplicado, puedes eliminar esta línea duplicada) */
   --bg-parchment: #f5ecd9;
   --bg-card: #faf3e6;
   --bg-overlay: rgba(0, 0, 0, 0.6);
@@ -49,4 +48,50 @@ button{
   --border: #c9b896;
   
   --shadow: rgba(0, 0, 0, 0.1);
+  
+  /* ===== NUEVAS VARIABLES PARA EL COMPONENTE RECRUITER ===== */
+  /* Variables para el portfolio - Mapeadas a tu paleta pergamino */
+  --bg-primary: var(--bg-parchment, #f5ecd9);
+  --bg-secondary: var(--bg-card, #faf3e6);
+  --bg-card-recruiter: var(--bg-card, #faf3e6);
+  --text-primary-recruiter: var(--text-primary, #2c2418);
+  --text-secondary-recruiter: var(--text-secondary, #4a3a2a);
+  --text-muted-recruiter: var(--text-muted, #6b5a4a);
+  --border-color: var(--border, #c9b896);
+  --shadow-recruiter: 0 4px 6px var(--shadow, rgba(0, 0, 0, 0.1));
+  --shadow-hover-recruiter: 0 8px 15px var(--shadow, rgba(0, 0, 0, 0.15));
+  --accent: var(--accent-gold, #8b6914);
+  --accent-dark: var(--accent-rust, #a0522d);
+  --gradient: linear-gradient(135deg, var(--accent-gold, #8b6914), var(--accent-rust, #a0522d));
 }
+
+/* Modo Oscuro para el componente Recruiter (Opcional - si quieres modo oscuro) */
+[data-theme="dark"] {
+  /* Version oscura manteniendo la esencia pergamino */
+  --bg-primary: #1a1612;
+  --bg-secondary: #2a241e;
+  --bg-card-recruiter: #2f2a22;
+  --text-primary-recruiter: #e8e0d5;
+  --text-secondary-recruiter: #c8bfb0;
+  --text-muted-recruiter: #a89a88;
+  --border-color: #4a3e30;
+  --shadow-recruiter: 0 4px 6px rgba(0, 0, 0, 0.3);
+  --shadow-hover-recruiter: 0 8px 15px rgba(0, 0, 0, 0.4);
+  --accent: #c9a03d;
+  --accent-dark: #b8653a;
+  --gradient: linear-gradient(135deg, #c9a03d, #b8653a);
+}
+
+/* También puedes mantener tu tema oscuro original si lo prefieres */
+/* [data-theme="dark"] {
+  --bg-parchment: #1a1612;
+  --bg-card: #2a241e;
+  --bg-overlay: rgba(0, 0, 0, 0.8);
+  --text-primary: #e8e0d5;
+  --text-secondary: #c8bfb0;
+  --text-muted: #a89a88;
+  --accent-gold: #c9a03d;
+  --accent-rust: #b8653a;
+  --border: #4a3e30;
+  --shadow: rgba(0, 0, 0, 0.3);
+} */

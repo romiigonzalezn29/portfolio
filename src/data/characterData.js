@@ -1,12 +1,16 @@
 import cv from "../assets/cv.pdf"
 import avatar from "../assets/pjpreview.png"
+import foto from "../assets/foto-real.jpg"
+
 
 export const characterData = {
   name: "Romina Gonzalez",
   title: "⚔️ Product Designer & Software Developer",
   avatar: avatar,
+  foto: foto,
   level: 27,
   xp: 85,
+
 
   story: {
     origin:

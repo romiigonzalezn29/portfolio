@@ -1,16 +1,16 @@
-
-import Map from './Components/Map'
-import Card from './Components/Card'
-  <Card/>
-
+// App.jsx
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
+import Desktop from './Pages/Desktop'
+import Recruiter from './Pages/Recruiter'
 
 function App() {
- 
-
   return (
-    <>
-  <Map/>
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Desktop/>} />
+        <Route path="/recruiter" element={<Recruiter/>} />
+      </Routes>
+    </BrowserRouter>
   )
 }
 

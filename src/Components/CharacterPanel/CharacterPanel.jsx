@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import s from './CharacterPanel.module.css';
-import panelImage from '../assets/panel.png';
-import { characterData } from '../data/characterData.js';
+
+import { characterData } from '../../data/characterData.js';
 
 export default function CharacterPanel({ isOpen, onClose }) {
   const [activeTab, setActiveTab] = useState('story');
@@ -139,7 +139,7 @@ export default function CharacterPanel({ isOpen, onClose }) {
               <h3>¿Cómo contactarme?</h3>
               <p className={s.contactIntro}>
                 ¿Te interesa mi trabajo o quieres conversar sobre alguna aventura digital?
-                Aquí tienes mis datos de contacto:
+                Acá tenes mis datos de contacto:
               </p>
               
               <div className={s.contactList}>

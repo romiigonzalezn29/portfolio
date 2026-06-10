@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import s from './NPC.module.css';
-import sorceressSprite from '../assets/pj2-animacion.png';
-import CharacterPanel from './CharacterPanel';
+import sorceressSprite from '../../assets/pj2-animacion.png';
+import CharacterPanel from '../CharacterPanel/CharacterPanel.jsx';
 
 export default function NPC() {
   const [isPanelOpen, setIsPanelOpen] = useState(false);
@@ -43,7 +43,9 @@ export default function NPC() {
             backgroundPosition: getBackgroundPosition(),
             backgroundSize: `${SPRITE_WIDTH * COLS}px ${SPRITE_HEIGHT * ROWS}px`
           }}
-          onClick={() => setIsPanelOpen(true)} // ✅ Abre el Character Panel directamente
+          onClick={() => setIsPanelOpen(true)} 
+         
+          // Abre el Character Panel directamente
         >
           <div className={s.clickHint}>💬</div>
         </div>
@@ -51,7 +53,7 @@ export default function NPC() {
         
       </div>
 
-      {/* Character Panel - SOLO UNO, sin duplicados */}
+      {/* Character Panel */}
       <CharacterPanel 
         isOpen={isPanelOpen}
         onClose={() => setIsPanelOpen(false)}

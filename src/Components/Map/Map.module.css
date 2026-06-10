@@ -36,7 +36,7 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-image: url('../assets/map.png');
+  background-image: url('../../assets/map.png');
   position: relative;
   width: 1000px; /* Ancho fijo para permitir scroll */
   

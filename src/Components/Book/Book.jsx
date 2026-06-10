@@ -1,5 +1,5 @@
 // Book.jsx
-import bookopen from "../assets/book.png";
+import bookopen from "../../assets/book.png";
 import s from "./Book.module.css";
 import { useState } from "react";
 

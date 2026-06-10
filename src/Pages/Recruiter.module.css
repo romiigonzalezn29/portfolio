@@ -1,0 +1,444 @@
+/* Recruiter.module.css - Versión adaptada a tu paleta pergamino */
+
+.layout {
+    display: flex;
+    min-height: 100vh;
+    transition: all 0.3s ease;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 320px;
+    position: fixed;
+    height: 100vh;
+    background: var(--bg-secondary);
+    border-right: 1px solid var(--border-color);
+    padding: 1rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    transition: all 0.3s ease;
+}
+
+.avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto 1.5rem;
+    border: 3px solid var(--accent);
+    box-shadow: var(--shadow-recruiter);
+    transition: all 0.3s ease;
+}
+
+.avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 28px;
+    font-weight: 700;
+    background: var(--gradient);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    margin: 0;
+    letter-spacing: 1.5px;
+    text-align: center;
+}
+
+.title {
+    font-size: 16px;
+    color: var(--accent);
+    margin: 10px 0 20px;
+    letter-spacing: 1px;
+    font-weight: 500;
+    text-transform: uppercase;
+    text-align: center;
+    font-family: 'Cinzel Decorative', serif;
+}
+
+.location {
+    text-align: center;
+    color: var(--text-secondary-recruiter);
+    font-size: 14px;
+    margin-top: -10px;
+    opacity: .8;
+}
+
+.contactSection {
+    margin: 1rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.contactItem {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 14px;
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    text-decoration: none;
+    color: var(--text-secondary-recruiter);
+    background: rgba(255,255,255,0.02);
+    transition: all .25s ease;
+}
+.contactItem:hover {
+    border-color: var(--accent);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-hover-recruiter);
+}
+
+.contactItem svg {
+    flex-shrink: 0;
+    color: var(--accent);
+}
+
+.contactItem div {
+    display: flex;
+    flex-direction: column;
+}
+
+.contactItem small {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    opacity: .7;
+}
+.contactItem span {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.cvButton {
+    background: var(--gradient);
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 14px;
+    width: 100%;
+    margin-top: 1rem;
+    transition: all 0.3s ease;
+    font-family: 'Cinzel Decorative', serif;
+}
+
+.cvButton:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-hover-recruiter);
+}
+
+/* Main Content */
+.mainContent {
+    flex: 1;
+    margin-left: 360px;
+    padding: 2rem 3rem;
+    transition: all 0.3s ease;
+}
+
+/* Secciones */
+.experienceSection, .projectsSection, .skillsSection {
+    margin-bottom: 3rem;
+}
+
+.sectionTitle {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--text-primary-recruiter);
+    margin-bottom: 2rem;
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+
+.sectionTitle::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background: var(--gradient);
+}
+
+.skillCategory {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--accent);
+    margin-bottom: 1rem;
+}
+
+.skillsList {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+}
+
+.skillTag {
+    background: var(--bg-secondary);
+    color: var(--text-primary-recruiter);
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    padding: 0.45rem 0.9rem;
+    font-size: 13px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.skillTag:hover {
+    background: var(--accent);
+    color: white;
+    transform: translateY(-2px);
+}
+/* Timeline */
+.timeline {
+    position: relative;
+    padding-left: 2rem;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: var(--gradient);
+}
+
+.timelineItem {
+    position: relative;
+    margin-bottom: 2.5rem;
+    padding-left: 1.5rem;
+}
+
+.timelineDot {
+    position: absolute;
+    left: -2.5rem;
+    top: 0;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: var(--accent);
+    border: 2px solid var(--bg-secondary);
+    box-shadow: 0 0 0 2px var(--accent);
+}
+
+.role {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--text-primary-recruiter);
+    margin-bottom: 0.25rem;
+}
+
+.company {
+    font-size: 16px;
+    color: var(--accent);
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+.period {
+    font-size: 14px;
+    color: var(--text-muted-recruiter);
+    margin-bottom: 1rem;
+}
+
+.description {
+    font-size: 16px;
+    color: var(--text-secondary-recruiter);
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.achievements {
+    list-style: none;
+    padding: 0;
+}
+
+.achievements li {
+    font-size: 15px;
+    color: var(--text-secondary-recruiter);
+    padding: 0.25rem 0;
+    padding-left: 1.25rem;
+    position: relative;
+}
+
+.achievements li::before {
+    content: '◆';
+    position: absolute;
+    left: 0;
+    font-size: 13px;
+}
+
+
+/* Skills Grid */
+.skillsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.skillCard {
+    background: var(--bg-card-recruiter);
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: var(--shadow-recruiter);
+    transition: all 0.3s ease;
+}
+
+.skillCard:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-hover-recruiter);
+}
+
+.skillHeader {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.75rem;
+}
+
+.skillName {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text-primary-recruiter);
+}
+
+
+
+.skillBar {
+    height: 6px;
+    background: var(--border-color);
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.skillFill {
+    height: 100%;
+    background: var(--gradient);
+    border-radius: 3px;
+    transition: width 0.6s ease;
+}
+
+/* Quotes */
+.quotesSection {
+    margin: 3rem 0;
+    padding: 2rem;
+    background: var(--bg-card-recruiter);
+    border-radius: 12px;
+    border-left: 4px solid var(--accent);
+    box-shadow: var(--shadow-recruiter);
+}
+
+.quote {
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--text-primary-recruiter);
+    font-style: italic;
+    margin-bottom: 1rem;
+}
+
+.quote:last-child {
+    margin-bottom: 0;
+}
+
+/* Theme Toggle Button */
+.themeToggle {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    background: var(--gradient);
+    color: white;
+    border: none;
+    padding: 0.75rem 1.25rem;
+    border-radius: 50px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: 'Cinzel Decorative', serif;
+    font-weight: 500;
+    font-size: 14px;
+    z-index: 1000;
+    transition: all 0.3s ease;
+    box-shadow: var(--shadow-recruiter);
+}
+
+.themeToggle:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-hover-recruiter);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--border-color);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--accent);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--accent-dark);
+}
+
+/* Responsive */
+@media (max-width: 968px) {
+    .sidebar {
+        width: 280px;
+    }
+    
+    .mainContent {
+        margin-left: 280px;
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .layout {
+        flex-direction: column;
+    }
+    
+    .sidebar {
+        position: relative;
+        width: 100%;
+        height: auto;
+        min-height: auto;
+        padding: 1.5rem;
+    }
+    
+    .mainContent {
+        margin-left: 0;
+        padding: 1.5rem;
+    }
+    
+    .avatar {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .projectsGrid {
+        grid-template-columns: 1fr;
+    }
+    
+    .skillsGrid {
+        grid-template-columns: 1fr;
+    }
+    
+    .themeToggle {
+        bottom: 1rem;
+        right: 1rem;
+        padding: 0.5rem 1rem;
+        font-size: 12px;
+    }
+}

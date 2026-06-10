@@ -1,15 +1,15 @@
 import { useState, useRef, useEffect } from "react";
 import s from "./Map.module.css";
-import Book from "./Book";
-import house from "../assets/house.png";
-import front from "../assets/front.png";
-import interative from "../assets/interactive.png";
-import lab from "../assets/lab.png";
-import bookimage from "../assets/skills.png";
-import Card from "./Card";
-import NPC from "./NPC";
+import Book from "../Book/Book";
+import house from "../../assets/house.png";
+import front from "../../assets/front.png";
+import interative from "../../assets/interactive.png";
+import lab from "../../assets/lab.png";
+import bookimage from "../../assets/skills.png";
+import Card from "../Card/Card";
+import NPC from "../NPC/NPC";
 
-import { proyectos } from "../data/proyectos";
+import { proyectos } from "../../data/proyectos";
 
 export default function Map() {
   const [activeCard, setActiveCard] = useState(null);

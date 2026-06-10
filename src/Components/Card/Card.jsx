@@ -1,5 +1,5 @@
 import s from './Card.module.css'
-import marco from '../assets/card.png'
+import marco from '../../assets/card.png'
 
 export default function Card({
   title,
