@@ -6,6 +6,11 @@
   position: relative;
   cursor: grab;
   -webkit-overflow-scrolling: touch; /* Scroll suave en iOS */
+    background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url('../../assets/fondo.png');
+
 }
 
 .mapWrapper:active {

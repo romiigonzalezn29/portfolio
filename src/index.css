@@ -1,13 +1,22 @@
+html,
+body,
+#root {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+}
 .body {
   font-family: 'Cinzel Decorative', serif;
   font-weight: 500;
   font-style: normal;
   font-size: 20px;
+ 
 }
 
 html {
   background-color: var(--bg-primary);
   transition: background-color 0.3s ease;
+ 
 }
 
 button {
@@ -82,16 +91,3 @@ button {
   --gradient: linear-gradient(135deg, #c9a03d, #b8653a);
 }
 
-/* También puedes mantener tu tema oscuro original si lo prefieres */
-/* [data-theme="dark"] {
-  --bg-parchment: #1a1612;
-  --bg-card: #2a241e;
-  --bg-overlay: rgba(0, 0, 0, 0.8);
-  --text-primary: #e8e0d5;
-  --text-secondary: #c8bfb0;
-  --text-muted: #a89a88;
-  --accent-gold: #c9a03d;
-  --accent-rust: #b8653a;
-  --border: #4a3e30;
-  --shadow: rgba(0, 0, 0, 0.3);
-} */
