@@ -1,7 +1,10 @@
 import { useState, useEffect } from 'react';
 import s from './CharacterPanel.module.css';
-
 import { characterData } from '../../data/characterData.js';
+// Importaciones de iconos agregadas
+import { MdEmail } from "react-icons/md";
+import { FiLinkedin, FiGithub, FiDownload, FiExternalLink } from "react-icons/fi";
+import { HiClipboardCopy } from "react-icons/hi";
 
 export default function CharacterPanel({ isOpen, onClose }) {
   const [activeTab, setActiveTab] = useState('story');
@@ -25,7 +28,7 @@ export default function CharacterPanel({ isOpen, onClose }) {
 
   const handleCopyEmail = () => {
     navigator.clipboard.writeText(characterData.contact.email);
-    alert('📧 Email copiado al portapapeles');
+    alert('Email copiado al portapapeles');
   };
 
   return (
@@ -144,12 +147,16 @@ export default function CharacterPanel({ isOpen, onClose }) {
               
               <div className={s.contactList}>
                 <div className={s.contactItem} onClick={handleCopyEmail}>
-                  <span className={s.contactIcon}>📧</span>
+                  <span className={s.contactIcon}>
+                    <MdEmail size={22} />
+                  </span>
                   <div className={s.contactInfo}>
                     <span className={s.contactLabel}>Email</span>
                     <span className={s.contactValue}>{characterData.contact.email}</span>
                   </div>
-                  <span className={s.copyHint}>Copiar</span>
+                  <span className={s.copyHint}>
+                    <HiClipboardCopy size={14} /> Copiar
+                  </span>
                 </div>
 
                 <a 
@@ -158,12 +165,16 @@ export default function CharacterPanel({ isOpen, onClose }) {
                   rel="noopener noreferrer"
                   className={s.contactItem}
                 >
-                  <span className={s.contactIcon}>🔗</span>
+                  <span className={s.contactIcon}>
+                    <FiLinkedin size={20} />
+                  </span>
                   <div className={s.contactInfo}>
                     <span className={s.contactLabel}>LinkedIn</span>
                     <span className={s.contactValue}>/in/{characterData.contact.linkedinUsername}</span>
                   </div>
-                  <span className={s.linkHint}>→</span>
+                  <span className={s.linkHint}>
+                    <FiExternalLink size={14} />
+                  </span>
                 </a>
 
                 <a 
@@ -172,12 +183,16 @@ export default function CharacterPanel({ isOpen, onClose }) {
                   rel="noopener noreferrer"
                   className={s.contactItem}
                 >
-                  <span className={s.contactIcon}>🐙</span>
+                  <span className={s.contactIcon}>
+                    <FiGithub size={20} />
+                  </span>
                   <div className={s.contactInfo}>
-                    <span className={s.contactLabel}>GitHub</span>
+                    <span className={s.contactLabel}>GitHub personal</span>
                     <span className={s.contactValue}>/{characterData.contact.githubUsername}</span>
                   </div>
-                  <span className={s.linkHint}>→</span>
+                  <span className={s.linkHint}>
+                    <FiExternalLink size={14} />
+                  </span>
                 </a>
 
                 <a 
@@ -186,22 +201,22 @@ export default function CharacterPanel({ isOpen, onClose }) {
                   rel="noopener noreferrer"
                   className={s.contactItem}
                 >
-                  <span className={s.contactIcon}>📄</span>
+                  <span className={s.contactIcon}>
+                    <FiDownload size={20} />
+                  </span>
                   <div className={s.contactInfo}>
                     <span className={s.contactLabel}>Curriculum</span>
-                    <span className={s.contactValue}>Descargar CV</span>
+                    <span className={s.contactValue}>Ver</span>
                   </div>
                   <span className={s.linkHint}>↓</span>
                 </a>
               </div>
-
-              <div className={s.contactFooter}>
-                <span className={s.contactMagic}>✨ "Que la magia del código nos conecte" ✨</span>
-              </div>
+            </div>
+            <div className={s.contactFooter}>
+              <span className={s.contactMagic}>✨ "Que la magia del código nos conecte" ✨</span>
             </div>
           </div>
         )}
-
       </div>
     </div>
   );
