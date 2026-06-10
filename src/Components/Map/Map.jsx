@@ -1,7 +1,6 @@
 import { useState, useRef, useEffect } from "react";
 import s from "./Map.module.css";
 import Book from "../Book/Book";
-import house from "../../assets/house.png";
 import front from "../../assets/front.png";
 import interative from "../../assets/interactive.png";
 import lab from "../../assets/lab.png";

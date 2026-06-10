@@ -2,7 +2,6 @@ import ruleta from '../assets/ruleta.gif'
 import hh from '../assets/hh.gif'
 import bioa from '../assets/bioa.gif'
 import hub from '../assets/Hub.gif'
-import yo from '../assets/yo.png'
 import bariatricline from '../assets/bariatricline.gif'
 import Recruiter from '../Pages/Recruiter'
 
